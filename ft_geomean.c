@@ -39,12 +39,40 @@ int ft_geomean(int *a, unsigned long size)
         i++;
     }
     p = ft_nsq(p,size);
-    return(p);
+    return((int) p);
 }
 
-/*int main()
+int *ft_tilt(int *a)
 {
-    int arr[] = {1, 2, 11, 35, 2, 6, 7};
-    printf("%i", ft_geomean(arr, sizeof(arr)/ sizeof(int)));
+    int i;
+    int min;
+
+    i = 0;
+    min = a[i];
+    while(a[i])
+    {
+        if(min > a[i+1])
+            min = a[i+1];
+        if(a[i] == 0)
+            a[i]++;
+        i++;
+    }
+    if(min >= 0)
+        return(a);
+    i = 0;
+    while(a[i])
+    {
+        a[i] = a[i] + (min * (-1) + 1);
+        printf("%i\n", a[i]);
+        i++;
+    }
+    return(a);
+}
+
+int main()
+{
+    int arr[] = {1, 2, 11, -35, 2, 6, 7};
+    //printf("%i", ft_geomean(arr, sizeof(arr)/ sizeof(int)));
+    ft_tilt(arr);
     return(0);
-}*/
+}
