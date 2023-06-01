@@ -70,11 +70,11 @@ int	ft_atoi(const char *str)
 	return (num * sign(str, clean_string(str, 0)));
 }
 
-int main()
+/*int main()
 {
 	char str [] = "1a567"; 
 	printf("ft_atoi: %i",ft_atoi(str));
 	printf("%c", '\n');
 	printf("atoi: %i", atoi(str));
 	return(0);
-}
+}*/

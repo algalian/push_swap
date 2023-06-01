@@ -9,8 +9,21 @@ int ft_all_digits(char *s)
     {
         if(ft_isdigit(s[i]) == 0)
             return(0);
+        i++;
     }
     return(1);
+}
+
+int ft_non_unique(char *s)
+{
+    int i;
+
+    i = 0;
+    while(s[i])
+    {
+        if(ft_memchr(s,))
+    }
+    
 }
 
 
@@ -19,15 +32,7 @@ int ft_parse(int p, char **s)
     int i;
 
     if(p < 2)
-    {
-        write(1, "Error", 5);
         return(-1);
-    }
-    if(p > __INT_MAX__)
-    {
-        write(1, "Error", 5);
-        return(-1);
-    }
     i = 0;
     while(s[i])
     {
